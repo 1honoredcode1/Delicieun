@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
+// @ts-expect-error - CSS side effect import
 import "./globals.css";
+
+import { LanguageProvider } from "./lib/LanguageContext";
+
+import TopBar from "./components/TopBar";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair-display",
@@ -10,7 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Délicieux",
+  title: "Délicieun",
   description: "The best food in existence. Finger Licking Good.",
 };
 
@@ -21,7 +26,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} `}>{children}</body>
+      <body className={`${playfair.variable} `}>
+        <LanguageProvider>
+          <TopBar />
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

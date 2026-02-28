@@ -1,3 +1,43 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 @import "bootstrap/dist/css/bootstrap.css";
 @import "glightbox/dist/css/glightbox.css";
+
+body {
+  font-family: "Open Sans", sans-serif !important;
+  background: #0c0b09 !important;
+  color: #fff;
+}
+
+a {
+  color: #8c2f39;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #b23a48;
+  text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/*Sections*/
+
+Sections section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: 1a1814;
+}
