@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
-// @ts-expect-error - CSS side effect import
+
 import "./globals.css";
 
 import { LanguageProvider } from "./lib/LanguageContext";

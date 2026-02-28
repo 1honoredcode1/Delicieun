@@ -1,4 +1,3 @@
-// @ts-expect-error - CSS side effect import
 import "../../styles/appButton.css";
 
 const AppButton = ({ name }: { name: string }) => {

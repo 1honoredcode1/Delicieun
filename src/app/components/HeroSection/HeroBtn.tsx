@@ -1,4 +1,3 @@
-// @ts-expect-error - CSS side effect import
 import "../../styles/heroBtn.css";
 
 export default function HeroBtn({

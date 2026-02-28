@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-// @ts-expect-error - CSS side effect import
+
 import "../styles/topBar.css";
 
 import { useLanguage } from "../lib/LanguageContext";

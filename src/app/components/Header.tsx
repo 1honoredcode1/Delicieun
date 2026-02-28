@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 import { useLanguage } from "../lib/LanguageContext";
-// @ts-expect-error - CSS side effect import
+
 import "../styles/header.css";
 import Link from "next/link";
 

@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 
 import GLightbox from "glightbox";
-// @ts-expect-error - CSS side effect import
+
 import "../styles/hero.css";
 
 import HeroBtn from "../components/HeroSection/HeroBtn";
