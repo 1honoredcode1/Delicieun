@@ -16,4 +16,11 @@ export const en = {
       { id: 7, name: "Gallery", target: "gallery", active: false },
     ],
   },
+  hero: {
+    title: "Welcome to",
+    paragraph:
+      "Continuing to putting a smile on our customers faces for years.",
+    btn1: "our menu",
+    btn2: "book a table",
+  },
 };

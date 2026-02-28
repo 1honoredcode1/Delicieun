@@ -16,4 +16,10 @@ export const no = {
       { id: 7, name: "Galleri", target: "gallery", active: false },
     ],
   },
+  hero: {
+    title: "Velkommen til",
+    paragraph: "Fortsetter å bringe et smil til kundenes ansikter i årevis.",
+    btn1: "vår meny",
+    btn2: "bestill et bord",
+  },
 };
