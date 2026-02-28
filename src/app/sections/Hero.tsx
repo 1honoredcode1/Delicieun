@@ -1,22 +1,36 @@
 "use client";
+
 import { useEffect } from "react";
-
-import GLightbox from "glightbox";
-
 import "../styles/hero.css";
-
 import HeroBtn from "../components/HeroSection/HeroBtn";
-
 import { useLanguage } from "../lib/LanguageContext";
 
 const Hero = () => {
   const { t } = useLanguage();
 
   useEffect(() => {
-    GLightbox({
-      selector: ".glightbox",
-    });
-  });
+    let lightbox: any;
+
+    const init = async () => {
+      // Import only on the client, at runtime
+      const mod = await import("glightbox");
+      const GLightbox = mod.default;
+
+      lightbox = GLightbox({
+        selector: ".glightbox",
+      });
+    };
+
+    init();
+
+    return () => {
+      // Cleanup if the library supports it
+      if (lightbox && typeof lightbox.destroy === "function") {
+        lightbox.destroy();
+      }
+    };
+  }, []);
+
   return (
     <section id="hero" className="d-flex align-items-center">
       <div
@@ -32,9 +46,10 @@ const Hero = () => {
             <h2>{t.hero.paragraph}</h2>
             <div className="btns">
               <HeroBtn name={t.hero.btn1} target="menu" />
-              <HeroBtn name={t.hero.btn2} target="book-a table" />
+              <HeroBtn name={t.hero.btn2} target="book-a-table" />
             </div>
           </div>
+
           <div
             className="col-lg-4 d-flex align-items-center justify-content-center position-relative"
             data-aos="zoom-in"
@@ -43,7 +58,8 @@ const Hero = () => {
             <a
               href="https://www.youtube.com/watch?v=3_upA09AntU"
               className="glightbox play-btn"
-            ></a>
+              aria-label="Play video"
+            />
           </div>
         </div>
       </div>

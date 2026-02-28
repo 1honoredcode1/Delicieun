@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "../lib/LanguageContext";
 
 import "../styles/header.css";
+
 import Link from "next/link";
 
 import AppButton from "./HeaderSection/AppButton";

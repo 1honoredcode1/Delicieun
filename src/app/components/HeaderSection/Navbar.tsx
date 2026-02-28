@@ -1,54 +1,77 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
-
 import { useLanguage } from "../../lib/LanguageContext";
 
 import "../../styles/navBar.css";
+
+type NavLink = {
+  id: string | number;
+  name: string;
+  target: string;
+  active?: boolean;
+};
 
 const Navbar = () => {
   const { t } = useLanguage();
 
   const [open, setOpen] = useState(false);
-  const handleToggleMenu = () => {
-    setOpen(!open);
-  };
+  const [active, setActive] = useState<string>("");
 
-  const [scroll, setScroll] = useState(0);
   useEffect(() => {
-    const handleScroll = () => setScroll(window.scrollY);
+    const handleActive = () => {
+      const links = t.nav.links as NavLink[];
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      const sections = links
+        .map((l) => document.getElementById(l.target))
+        .filter(Boolean) as HTMLElement[];
 
-  const handleScrollTo = (section: string) => {};
+      const y = window.scrollY + 120;
 
-  const handleNavActive = () => {};
+      let current = "";
+      for (const s of sections) {
+        if (y >= s.offsetTop) current = s.id;
+      }
+      setActive(current);
+    };
+
+    handleActive();
+    window.addEventListener("scroll", handleActive);
+    return () => window.removeEventListener("scroll", handleActive);
+  }, [t.nav.links]);
+
+  const handleToggleMenu = () => setOpen((v) => !v);
+
+  const handleScrollTo = (section: string) => {
+    setOpen(false);
+    const el = document.getElementById(section);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <nav
       id="navbar"
-      className={`navbar order-last order-lg-0 ${open ? "navbar-mobile" : undefined}`}
+      className={`navbar order-last order-lg-0 ${open ? "navbar-mobile" : ""}`}
     >
       <ul>
         {(t.nav.links as NavLink[]).map((link) => (
           <li key={link.id}>
-            <Link
-              className={`nav-link scrollto ${link.active ? "active" : undefined}`}
+            <a
+              className={`nav-link scrollto ${active === link.target ? "active" : ""}`}
               href={`#${link.target}`}
-              onClick={() => handleScrollTo(link.target)}
+              onClick={(e) => {
+                e.preventDefault();
+                handleScrollTo(link.target);
+              }}
             >
               {link.name}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
-      <i
-        className="bi bi-list mobile-nav-toggle"
-        onClick={handleToggleMenu}
-      ></i>
+
+      <i className="bi bi-list mobile-nav-toggle" onClick={handleToggleMenu} />
     </nav>
   );
 };
