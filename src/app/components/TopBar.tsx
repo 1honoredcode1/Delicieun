@@ -11,7 +11,6 @@ const TopBar = () => {
   const switchLang = (next: "en" | "no") => setLang(next);
 
   const [scroll, setScroll] = useState(0);
-
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY);
