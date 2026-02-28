@@ -15,13 +15,14 @@ const Navbar = () => {
 
   const [scroll, setScroll] = useState(0);
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    const handleScroll = () => {
       setScroll(window.scrollY);
-    });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
-      window.removeEventListener("scroll", () => {
-        setScroll(window.scrollY);
-      });
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [scroll]);
 
@@ -35,7 +36,7 @@ const Navbar = () => {
       className={`navbar order-last order-lg-0 ${open ? "navbar-mobile" : undefined}`}
     >
       <ul>
-        {t.nav.links.map((link) => (
+        {(t.nav.links as NavLink[]).map((link) => (
           <li key={link.id}>
             <Link
               className={`nav-link scrollto ${link.active ? "active" : undefined}`}
