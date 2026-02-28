@@ -21,7 +21,7 @@ const TopBar = () => {
         setScroll(window.scrollY);
       });
     };
-  });
+  }, [scroll]);
 
   return (
     <div

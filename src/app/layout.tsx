@@ -6,6 +6,7 @@ import "./globals.css";
 import { LanguageProvider } from "./lib/LanguageContext";
 
 import TopBar from "./components/TopBar";
+import Header from "./components/Header";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair-display",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body className={`${playfair.variable} `}>
         <LanguageProvider>
           <TopBar />
+          <Header />
           {children}
         </LanguageProvider>
       </body>
