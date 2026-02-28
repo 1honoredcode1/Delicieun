@@ -15,14 +15,13 @@ const Navbar = () => {
 
   const [scroll, setScroll] = useState(0);
   useEffect(() => {
-    const handleScroll = () => {
+    window.addEventListener("scroll", () => {
       setScroll(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
+    });
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", () => {
+        setScroll(window.scrollY);
+      });
     };
   }, [scroll]);
 
