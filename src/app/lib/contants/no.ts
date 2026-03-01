@@ -31,4 +31,36 @@ export const no = {
     point2: "Autentiske oppskrifter med moderne preg.",
     point3: "Elegant atmosfære og førsteklasses service.",
   },
+  whyUs: {
+    cards: [
+      {
+        id: 1,
+        title: "Førsteklasses råvarer",
+        component:
+          "Vi bruker kun de ferskeste sesongbaserte råvarene for å sikre eksepsjonell smak og kvalitet i hver rett.",
+      },
+      {
+        id: 2,
+        title: "Erfarent kokketeam",
+        component:
+          "Våre kokker kombinerer tradisjonelle teknikker med moderne kreativitet for å skape uforglemmelige matopplevelser.",
+      },
+      {
+        id: 3,
+        title: "Elegant atmosfære",
+        component:
+          "Nyt en raffinert og innbydende atmosfære som løfter enhver anledning – fra hverdagsmiddager til spesielle feiringer.",
+      },
+    ],
+  },
+  sectionTitles: {
+    whyUs: {
+      subtitle: "Hvorfor Velge Oss",
+      title: "Hvorfor Restauranten Skiller Seg Ut",
+    },
+    menu: {
+      subtitle: "Meny",
+      title: "Utforsk Vår Smakfulle Meny",
+    },
+  },
 };

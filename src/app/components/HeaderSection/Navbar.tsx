@@ -21,21 +21,31 @@ const Navbar = () => {
   useEffect(() => {
     const handleActive = () => {
       const links = t.nav.links as NavLink[];
+
       const sections = links
         .map((l) => document.getElementById(l.target))
         .filter(Boolean) as HTMLElement[];
 
-      const y = window.scrollY + 120;
+      const scrollPos = window.scrollY + 150;
 
       let current = "";
-      for (const s of sections) {
-        if (y >= s.offsetTop) current = s.id;
+
+      for (const section of sections) {
+        const top = section.offsetTop;
+        const bottom = top + section.offsetHeight;
+
+        if (scrollPos >= top && scrollPos < bottom) {
+          current = section.id;
+          break;
+        }
       }
+
       setActive(current);
     };
 
-    handleActive();
     window.addEventListener("scroll", handleActive);
+    handleActive();
+
     return () => window.removeEventListener("scroll", handleActive);
   }, [t.nav.links]);
 

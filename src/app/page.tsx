@@ -6,6 +6,7 @@ import Gallery from "./sections/Gallery";
 import Hero from "./sections/Hero";
 import Menu from "./sections/Menu";
 import Specials from "./sections/Specials";
+import WhyUs from "./sections/WhyUs";
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <Hero />
       <main id="main">
         <About />
+        <WhyUs />
         <Menu />
         <Specials />
         <Booking />

@@ -32,4 +32,36 @@ export const en = {
     point2: "Authentic recipes with modern flair.",
     point3: "Elegant atmosphere & premium service.",
   },
+  whyUs: {
+    cards: [
+      {
+        id: 1,
+        title: "Premium Ingredients",
+        component:
+          "We source only the freshest seasonal ingredients to ensure exceptional flavor and quality in every dish.",
+      },
+      {
+        id: 2,
+        title: "Expert Culinary Team",
+        component:
+          "Our chefs combine traditional techniques with modern creativity to deliver unforgettable dining experiences.",
+      },
+      {
+        id: 3,
+        title: "Elegant Atmosphere",
+        component:
+          "Enjoy a refined and welcoming ambiance designed to elevate every occasion, from casual dinners to special celebrations.",
+      },
+    ],
+  },
+  sectionTitles: {
+    whyUs: {
+      subtitle: "Why Choose Us",
+      title: "Why Our Restaurant Stands Out",
+    },
+    menu: {
+      subtitle: "Menu",
+      title: "Check Our Tasty Menu",
+    },
+  },
 };
