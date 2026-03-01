@@ -4,8 +4,10 @@ import { useLanguage } from "../lib/LanguageContext";
 
 import "../styles/sectionTitle.css";
 
+type SectionKey = "about" | "whyUs" | "menu";
+
 type SectionTitleProps = {
-  section: keyof typeof t.sectionTitles;
+  section: SectionKey;
 };
 
 const SectionTitle = ({ section }: SectionTitleProps) => {
