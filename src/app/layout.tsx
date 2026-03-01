@@ -7,6 +7,7 @@ import { LanguageProvider } from "./lib/LanguageContext";
 
 import TopBar from "./components/TopBar";
 import Header from "./components/Header";
+import BackToTopBtn from "./components/BackToTopBtn";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair-display",
@@ -32,6 +33,7 @@ export default function RootLayout({
           <TopBar />
           <Header />
           {children}
+          <BackToTopBtn />
         </LanguageProvider>
       </body>
     </html>

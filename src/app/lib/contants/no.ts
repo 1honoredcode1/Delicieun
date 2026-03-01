@@ -22,4 +22,13 @@ export const no = {
     btn1: "vår meny",
     btn2: "bestill et bord",
   },
+  about: {
+    text: "Vi skaper uforglemmelige matopplevelser",
+    paragraph1: "Oppdag en blanding av tradisjon og innovasjon i hver rett.",
+    paragraph2:
+      "Hos Délicieun mener vi at det å spise middag er mer enn bare et måltid – det er en opplevelse. Fra håndlagde smaker til raffinert atmosfære, er hver detalj utarbeidet med lidenskap.",
+    point1: "Ferske ingredienser hentes daglig.",
+    point2: "Autentiske oppskrifter med moderne preg.",
+    point3: "Elegant atmosfære og førsteklasses service.",
+  },
 };

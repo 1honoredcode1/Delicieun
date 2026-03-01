@@ -5,23 +5,22 @@ import { useLanguage } from "../../lib/LanguageContext";
 
 import "../../styles/navBar.css";
 
-type NavLink = {
-  id: string | number;
-  name: string;
-  target: string;
-  active?: boolean;
-};
-
 const Navbar = () => {
   const { t } = useLanguage();
 
   const [open, setOpen] = useState(false);
+  const [scroll, setScroll] = useState(0);
   const [active, setActive] = useState<string>("");
+
+  useEffect(() => {
+    const handleScroll = () => setScroll(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleActive = () => {
       const links = t.nav.links as NavLink[];
-
       const sections = links
         .map((l) => document.getElementById(l.target))
         .filter(Boolean) as HTMLElement[];

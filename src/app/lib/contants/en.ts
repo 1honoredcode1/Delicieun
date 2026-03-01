@@ -23,4 +23,13 @@ export const en = {
     btn1: "our menu",
     btn2: "book a table",
   },
+  about: {
+    text: "We craft unforgettable dining experiences",
+    paragraph1: "Discover a fusion of tradition and innovation in every dish.",
+    paragraph2:
+      "At Délicieun, we believe dining is more than a meal — it is an experience. From handcrafted flavors to refined ambiance, every detail is curated with passion.",
+    point1: "Fresh ingredients sourced daily.",
+    point2: "Authentic recipes with modern flair.",
+    point3: "Elegant atmosphere & premium service.",
+  },
 };
