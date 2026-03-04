@@ -1,9 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import { useLanguage } from "../../lib/LanguageContext";
 
 import "../../styles/navBar.css";
+
+type NavLink = {
+  id: string;
+  name: string;
+  target: string;
+  active?: boolean;
+};
 
 const Navbar = () => {
   const { t } = useLanguage();
