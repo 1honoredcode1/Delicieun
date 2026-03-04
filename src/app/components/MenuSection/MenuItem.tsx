@@ -1,3 +1,4 @@
+import Image from "next/image";
 import "../../styles/menuItem.css";
 import Link from "next/link";
 
@@ -14,7 +15,13 @@ const MenuItem = ({
 }) => {
   return (
     <div className="col-lg-6 menu-item">
-      <img src={item.preview} className="menu-img" alt="food image" />
+      <Image
+        src={item.preview}
+        className="menu-img"
+        width={100}
+        height={100}
+        alt="food image"
+      />
       <div className="menu-content">
         <Link href={`/menu/${item.id}`}>{item.name} </Link>
         <span>${item.price} </span>
