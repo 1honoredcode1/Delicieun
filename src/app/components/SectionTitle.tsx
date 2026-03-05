@@ -4,7 +4,15 @@ import { useLanguage } from "../lib/LanguageContext";
 
 import "../styles/sectionTitle.css";
 
-type SectionKey = "whyUs" | "menu" | "specials";
+type SectionKey =
+  | "whyUs"
+  | "menu"
+  | "specials"
+  | "events"
+  | "chefs"
+  | "booking"
+  | "gallery"
+  | "contactUs";
 
 type SectionTitleProps = {
   section: SectionKey;

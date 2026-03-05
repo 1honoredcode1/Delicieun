@@ -1,15 +1,7 @@
 import Breadcrumb from "@/app/components/MenuSection/Breadcrumb";
 import Image from "next/image";
-
-async function getFoodData(id: string) {
-  const res = await fetch(`http://localhost:3000/api/menu/${id}`);
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch food");
-  }
-
-  return res.json();
-}
+import { notFound } from "next/navigation";
+import { menu } from "@/app/data/data";
 
 export default async function MenuSingle({
   params,
@@ -17,8 +9,14 @@ export default async function MenuSingle({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+  const numericId = Number(id);
 
-  const food = await getFoodData(id);
+  if (Number.isNaN(numericId)) notFound();
+
+  const food = menu.find((item) => item.id === numericId);
+  if (!food) notFound();
+
+  const src = food.preview.startsWith("/") ? food.preview : `/${food.preview}`;
 
   return (
     <main id="main">
@@ -28,10 +26,10 @@ export default async function MenuSingle({
           <div className="row">
             <div className="col-lg-6">
               <Image
-                src={food.preview}
+                src={src}
                 alt={food.name}
-                height={500}
                 width={500}
+                height={500}
                 className="img-fluid mt-2"
               />
             </div>
