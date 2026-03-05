@@ -62,5 +62,9 @@ export const no = {
       subtitle: "Meny",
       title: "Utforsk Vår Smakfulle Meny",
     },
+    specials: {
+      subtitle: "Spesials",
+      title: "Se Våre Fantastiske Spesialtilbud",
+    },
   },
 };

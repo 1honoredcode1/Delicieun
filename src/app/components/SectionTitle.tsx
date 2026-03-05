@@ -4,7 +4,7 @@ import { useLanguage } from "../lib/LanguageContext";
 
 import "../styles/sectionTitle.css";
 
-type SectionKey = "about" | "whyUs" | "menu";
+type SectionKey = "whyUs" | "menu" | "specials";
 
 type SectionTitleProps = {
   section: SectionKey;

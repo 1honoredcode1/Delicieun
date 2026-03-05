@@ -114,3 +114,83 @@ export const filters = [
   { id: 3, name: "Speciality", category: "speciality", active: "false" },
   { id: 4, name: "Dessert", category: "dessert", active: "false" },
 ];
+
+export const specials = [
+  {
+    id: 1,
+    image: "/assets/menu/truffle.jpg",
+    title: "Black Truffle Mushroom Risotto",
+    subtitle:
+      "Creamy Arborio rice slowly cooked with wild mushrooms and finished with shaved black truffle.",
+    content:
+      "Our signature risotto is prepared with imported Italian Arborio rice, sautéed forest mushrooms, and aged parmesan. Finished with aromatic black truffle and a touch of white wine, this dish delivers deep earthy flavors and a luxurious creamy texture.",
+    active: true,
+  },
+  {
+    id: 2,
+    image: "/assets/menu/salmon.jpg",
+    title: "Grilled Atlantic Salmon",
+    subtitle:
+      "Fresh Atlantic salmon served with lemon butter sauce and seasonal vegetables.",
+    content:
+      "Perfectly grilled salmon fillet seasoned with sea salt and fresh herbs. Served with roasted asparagus, baby potatoes, and a silky lemon butter sauce that balances richness with freshness.",
+    active: false,
+  },
+  {
+    id: 3,
+    image: "/assets/menu/beef.jpg",
+    title: "Prime Beef Tenderloin",
+    subtitle: "Juicy grilled tenderloin steak topped with garlic herb butter.",
+    content:
+      "A premium cut of beef tenderloin grilled to your preferred doneness. Served with creamy mashed potatoes, roasted vegetables, and finished with melted garlic herb butter for a rich and satisfying flavor.",
+    active: false,
+  },
+  {
+    id: 4,
+    image: "/assets/menu/seafood.jpg",
+    title: "Seafood Linguine",
+    subtitle:
+      "Classic Italian pasta with shrimp, mussels, and clams in white wine sauce.",
+    content:
+      "Fresh linguine tossed in a delicate white wine and garlic sauce with shrimp, mussels, and clams. Finished with parsley and olive oil for a light yet flavorful seafood pasta.",
+    active: false,
+  },
+  {
+    id: 5,
+    image: "/assets/menu/cake.jpg",
+    title: "Chocolate Lava Cake",
+    subtitle:
+      "Warm chocolate cake with a molten center served with vanilla ice cream.",
+    content:
+      "A decadent dessert featuring rich dark chocolate cake with a flowing molten center. Served warm alongside creamy vanilla ice cream and a dusting of powdered sugar.",
+    active: false,
+  },
+];
+
+export const specialsFilters = [
+  {
+    id: 1,
+    name: "Truffle Risotto",
+    active: true,
+  },
+  {
+    id: 2,
+    name: "Grilled Salmon",
+    active: false,
+  },
+  {
+    id: 3,
+    name: "Beef Tenderloin",
+    active: false,
+  },
+  {
+    id: 4,
+    name: "Seafood Linguine",
+    active: false,
+  },
+  {
+    id: 5,
+    name: "Chocolate Lava Cake",
+    active: false,
+  },
+];

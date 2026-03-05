@@ -63,5 +63,9 @@ export const en = {
       subtitle: "Menu",
       title: "Check Our Tasty Menu",
     },
+    specials: {
+      subtitle: "Specials",
+      title: "Look At Our Amazing Specials",
+    },
   },
 };
