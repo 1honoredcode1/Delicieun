@@ -10,7 +10,7 @@ type SectionKey =
   | "specials"
   | "events"
   | "chefs"
-  | "booking"
+  | "bookings"
   | "gallery"
   | "contactUs";
 

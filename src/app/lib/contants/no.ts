@@ -2,9 +2,6 @@ export const no = {
   topbar: {
     time: "Man-Lør: 11AM - 23PM",
   },
-  header: {
-    bookTable: "Bestill Bord",
-  },
   nav: {
     links: [
       { id: 1, name: "Hjem", target: "hero", active: true },

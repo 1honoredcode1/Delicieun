@@ -2,9 +2,6 @@ export const en = {
   topbar: {
     time: "Mon-Sat: 11AM - 23PM",
   },
-  header: {
-    bookTable: "Book a Table",
-  },
   nav: {
     links: [
       { id: 1, name: "Home", target: "hero", active: true },

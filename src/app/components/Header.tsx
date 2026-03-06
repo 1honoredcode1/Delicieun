@@ -2,18 +2,12 @@
 
 import { useState, useEffect } from "react";
 
-import { useLanguage } from "../lib/LanguageContext";
-
 import "../styles/header.css";
 
 import Link from "next/link";
-
-import AppButton from "./HeaderSection/AppButton";
 import Navbar from "./HeaderSection/Navbar";
 
 const Header = () => {
-  const { t } = useLanguage();
-
   const [scroll, setScroll] = useState(0);
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +31,6 @@ const Header = () => {
           <Link href="/">Délicieun</Link>
         </h1>
         <Navbar />
-        <AppButton name={t.header.bookTable} />
       </div>
     </header>
   );

@@ -1,3 +1,5 @@
+"use client";
+
 import "../../styles/heroBtn.css";
 
 export default function HeroBtn({
@@ -7,15 +9,25 @@ export default function HeroBtn({
   name: string;
   target: string;
 }) {
-  // eslint-disable-next-line
-  const handleScrollTo = (section: string) => {};
+  const handleScrollTo = (section: string) => {
+    const el = document.getElementById(section);
+    if (!el) return;
+
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   return (
     <a
       onClick={() => handleScrollTo(target)}
-      className={`btn-hero animated fadeInUp scrollto ${name.includes("book") ? "ms-4" : undefined}`}
+      className={`btn-hero animated fadeInUp scrollto ${
+        name.toLowerCase().includes("book") ? "ms-4" : ""
+      }`}
+      style={{ cursor: "pointer" }}
     >
-      {name}{" "}
+      {name}
     </a>
   );
 }
