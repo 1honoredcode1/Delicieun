@@ -66,5 +66,13 @@ export const no = {
       subtitle: "Spesials",
       title: "Se Våre Fantastiske Spesialtilbud",
     },
+    events: {
+      subtitle: "Arrangementer",
+      title: "Se På Våre Forskjellige Arrangementer",
+    },
+    bookings: {
+      subtitle: "Bestilling",
+      title: "Bestill Et Bord Hos Oss Nå",
+    },
   },
 };

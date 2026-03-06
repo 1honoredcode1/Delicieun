@@ -24,7 +24,7 @@ const SectionTitle = ({ section }: SectionTitleProps) => {
   const data = t.sectionTitles[section];
 
   return (
-    <div className="section-title">
+    <div className="section-title mt-5">
       <h2>{data.subtitle}</h2>
       <p>{data.title}</p>
     </div>

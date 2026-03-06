@@ -67,5 +67,13 @@ export const en = {
       subtitle: "Specials",
       title: "Look At Our Amazing Specials",
     },
+    events: {
+      subtitle: "Events",
+      title: "Look At Our Varying Events",
+    },
+    bookings: {
+      subtitle: "Booking",
+      title: "Book A Table With Us Now",
+    },
   },
 };
