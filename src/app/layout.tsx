@@ -8,6 +8,8 @@ import { LanguageProvider } from "./lib/LanguageContext";
 import TopBar from "./components/TopBar";
 import Header from "./components/Header";
 import BackToTopBtn from "./components/BackToTopBtn";
+import Footer from "./sections/Footer";
+import AosInit from "./components/AosInit";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair-display",
@@ -32,8 +34,10 @@ export default function RootLayout({
         <LanguageProvider>
           <TopBar />
           <Header />
+          <AosInit />
           {children}
           <BackToTopBtn />
+          <Footer />
         </LanguageProvider>
       </body>
     </html>
