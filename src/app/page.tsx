@@ -1,5 +1,6 @@
 import About from "./sections/About";
 import Booking from "./sections/Booking";
+import ContactUs from "./sections/ContactUs";
 import Events from "./sections/Events";
 import Gallery from "./sections/Gallery";
 import Hero from "./sections/Hero";
@@ -21,6 +22,7 @@ const page = () => {
         <Booking />
         <Testimonials />
         <Gallery />
+        <ContactUs />
       </main>
     </>
   );
