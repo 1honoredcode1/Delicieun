@@ -249,7 +249,7 @@ export const testimonials = [
     content:
       "One of the best dining experiences I've had in a long time. The truffle risotto was incredible and the service was attentive without being intrusive. We will definitely be coming back.",
     avatar: "/assets/testimonials/testimonials-1.jpg",
-    client: "Emma Larsen",
+    client: "John Larsen",
     position: "Food Blogger",
   },
   {
@@ -257,7 +257,7 @@ export const testimonials = [
     content:
       "We celebrated our anniversary here and everything was perfect. The atmosphere, the wine selection, and the seafood linguine were all outstanding. Highly recommend for special occasions.",
     avatar: "/assets/testimonials/testimonials-2.jpg",
-    client: "Daniel Sørensen",
+    client: "Emma Sørensen",
     position: "Architect",
   },
   {
@@ -265,7 +265,7 @@ export const testimonials = [
     content:
       "Amazing food and beautiful presentation. The staff was extremely welcoming and helped us choose the perfect dishes. The chocolate lava cake alone is worth the visit.",
     avatar: "/assets/testimonials/testimonials-3.jpg",
-    client: "Maria Jensen",
+    client: "Kevin Jensen",
     position: "Restaurant Owner",
   },
   {
@@ -281,7 +281,7 @@ export const testimonials = [
     content:
       "A truly premium restaurant experience. From the warm welcome to the final dessert, everything was thoughtfully prepared. This place has quickly become one of my favorites.",
     avatar: "/assets/testimonials/testimonials-5.jpg",
-    client: "Anna Pedersen",
+    client: "Mathias Pedersen",
     position: "Entrepreneur",
   },
 ];
@@ -318,30 +318,6 @@ export const gallery = [
   {
     id: 8,
     image: "/assets/gallery/gallery-8.jpg",
-  },
-];
-
-export const chefs = [
-  {
-    id: 1,
-    name: "Walter White",
-    photo: "/assets/chefs/chef-1.jpg",
-    position: "Master Chef",
-    delay: "100",
-  },
-  {
-    id: 2,
-    name: "Jim Jhonson",
-    photo: "/assets/chefs/chef-2.jpg",
-    position: "Patissier",
-    delay: "200",
-  },
-  {
-    id: 3,
-    name: "William Anderson",
-    photo: "/assets/chefs/chef-3.jpg",
-    position: "Cook",
-    delay: "300",
   },
 ];
 

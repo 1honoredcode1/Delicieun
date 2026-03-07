@@ -9,10 +9,10 @@ type SectionKey =
   | "menu"
   | "specials"
   | "events"
-  | "chefs"
   | "bookings"
   | "gallery"
-  | "contactUs";
+  | "contactUs"
+  | "testimonials";
 
 type SectionTitleProps = {
   section: SectionKey;

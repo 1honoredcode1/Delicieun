@@ -72,5 +72,17 @@ export const en = {
       subtitle: "Booking",
       title: "Book A Table With Us Now",
     },
+    testimonials: {
+      subtitle: "Testimonials",
+      title: "The Reviews Our Amazing Clients Have Left",
+    },
+    gallery: {
+      subtitle: "Gallery",
+      title: "Just A Part Of What To Expect At Our Restaurant",
+    },
+    contactUs: {
+      subtitle: "Contact Us",
+      title: "Contact Us Now For Any Questions",
+    },
   },
 };

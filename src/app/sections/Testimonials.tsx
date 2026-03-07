@@ -6,68 +6,77 @@ import "swiper/css/pagination";
 
 import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
+
+import "../styles/testimonials.css";
 import SectionTitle from "../components/SectionTitle";
-import EventsItem from "../components/EventsSection/EventsItem";
+import TestimonialstItem from "../components/TestimonialsSection/TestimonialstItem";
 
-import "../styles/events.css";
-
-const Events = () => {
+const Testimonials = () => {
   const [slides, setSlides] = useState<any | []>([]);
 
-  const getEventData = () => {
-    fetch("/api/events")
+  const getTestimonialsData = () => {
+    fetch("/api/testimonials")
       .then((res) => res.json())
       .then((data) => setSlides(data))
-      .catch((e) => console.log(e.messages));
+      .catch((e) => console.log(e.message));
   };
 
   useEffect(() => {
-    getEventData();
+    getTestimonialsData();
   }, []);
 
   return (
-    <section id="events" className="events">
+    <section id="testimonials" className="testimonials section-bg">
       <div className="container" data-aos="fade-up">
-        <SectionTitle section="events" />
+        <SectionTitle section="testimonials" />
         <div data-aos="fade-up" data-aos-delay="100">
           <Swiper
-            spaceBetween={0}
+            slidesPerView={"auto"}
+            speed={600}
             autoplay={{
               delay: 5000,
               disableOnInteraction: false,
             }}
             pagination={{
-              el: ".swiper-pagination",
+              el: ".testimonials-swiper-pagination",
               type: "bullets",
               clickable: true,
             }}
             modules={[Autoplay, Pagination]}
             loop={true}
-            className="events-slider swiper-container"
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              1200: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            }}
+            className="testimonials-slider swiper-container"
           >
             {slides &&
               slides.length > 0 &&
               slides.map(
                 (slide: {
                   id: number;
-                  image: string;
-                  title: string;
-                  price: number;
                   content: string;
-                  details: string[];
-                  summary: string;
+                  avatar: string;
+                  client: string;
+                  position: string;
                 }) => (
                   <SwiperSlide key={slide.id}>
-                    <EventsItem item={slide} />
+                    <TestimonialstItem item={slide} />
                   </SwiperSlide>
                 ),
               )}
           </Swiper>
-          <div className="swiper-pagination"></div>
+          <div className="testimonials-swiper-pagination"></div>
         </div>
       </div>
     </section>
   );
 };
 
-export default Events;
+export default Testimonials;

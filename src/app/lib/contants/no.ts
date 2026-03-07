@@ -71,5 +71,17 @@ export const no = {
       subtitle: "Bestilling",
       title: "Bestill Et Bord Hos Oss Nå",
     },
+    testimonials: {
+      subtitle: "Anbefalinger",
+      title: "Anmeldelsene Våre Fantastiske Kunder Har Lagt Igjen",
+    },
+    gallery: {
+      subtitle: "Galleri",
+      title: "Bare En Del Av Hva Du Kan Forvente På Restauranten Vår",
+    },
+    contactUs: {
+      subtitle: "Kontakt Oss",
+      title: "Kontakt Oss Nå Hvis Du Har Spørsmål",
+    },
   },
 };

@@ -1,5 +1,0 @@
-const Chefs = () => {
-  return <div id="chefs">Chefs</div>;
-};
-
-export default Chefs;
